@@ -159,7 +159,8 @@ const cropDropdown = document.getElementById('crop');
   const selectedSeason = seasonDropdown.value;
 
   // Clear the current crop options
-  cropDropdown.innerHTML = '<option value="">Select crop</option>';
+  cropDropdown.innerHTML = '<option value="" disabled selected>Select crop</option>';
+
   
   // If both district and season are selected, add the corresponding crop options to the dropdown
 if (selectedDistrict && selectedSeason) {

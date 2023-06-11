@@ -96,9 +96,9 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['confirm
     $cpassword = $_POST['confirmpassword'];
 	
 	
-	$query5 = "SELECT StateName from state where StCode ='$state'";
-	$ses_sq5 = pg_query($conn, $query5);
-              $row5 = pg_fetch_assoc($ses_sq5);
+	//$query5 = "SELECT StateName from state where StCode ='$state'";
+	//$ses_sq5 = pg_query($conn, $query5);
+    //$row5 = pg_fetch_assoc($ses_sq5);
               
 
     if (is_valid_email($email) == true && is_valid_passwords($password,$cpassword) == true)

@@ -24,16 +24,16 @@ if(isset($_POST['custupdate']))
 	  $name = ($_POST['name']);
 	  $email = ($_POST['email']);
 	  $mobile = ($_POST['mobile']);
-	  $state = ($_POST['state']);
+	  $state = null;
 		$city = ($_POST['city']);
 		$address = ($_POST['address']);
 		$pincode = ($_POST['pincode']);
 		$pass = ($_POST['pass']);
 
-$query5 = "SELECT StateName from state where StCode ='$state'";
-	$ses_sq5 = pg_query($conn, $query5);
-              $row5 = pg_fetch_assoc($ses_sq5);
-              $statename = $row5['StateName'];
+//$query5 = "SELECT StateName from state where StCode ='$state'";
+	//$ses_sq5 = pg_query($conn, $query5);
+      //        $row5 = pg_fetch_assoc($ses_sq5);
+              $statename = null;
 			  
     $updatequery1 = "UPDATE custlogin set  cust_name='$name', email='$email', phone_no='$mobile',  state='$statename',  city='$city',  address='$address', pincode='$pincode', password='$pass'  where cust_id='$id'";pg_query($conn, $updatequery1);
 	 header("location: cprofile.php");

@@ -346,12 +346,12 @@ function fetchMessages() {
 			
         }).fail(function(jqXHR, textStatus, errorThrown) {
 			chatbox.innerHTML = '';  
-			let errorMessage = 'Farming looks mighty easy when your plow is a pencil, and youre a thousand miles from the corn field.';
+			let errorMessage = 'Землеробство виглядає дуже легким, коли ваш плуг — це олівець, а ви за тисячу миль від кукурудзяного поля.';
 			chatbox.append(errorMessage);
         });
     } catch (error) {
 		chatbox.innerHTML = '';  
-		let errorMessage2 = 'Farming looks mighty easy when your plow is a pencil, and youre a thousand miles from the corn field.';
+		let errorMessage2 = 'Землеробство виглядає дуже легким, коли ваш плуг — це олівець, а ви за тисячу миль від кукурудзяного поля.';
 		chatbox.append(errorMessage2);
     }
 }

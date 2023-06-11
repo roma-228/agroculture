@@ -174,19 +174,25 @@ $query4 = "SELECT * from custlogin where email='$user_check'";
 				{
 					if($values["item_id"] == $_GET["id"])
 					{
-						unset($_SESSION["shopping_cart"][$keys]);
-						$b=$_GET["id"];
 						
+						
+						
+						$count=$values["item_quantity"];
+						$item_id_update=$_GET["id"];
+					
+						$queryUpdate="UPDATE production_approx set quantity = quantity + '$count' where crop = (SELECT trade_crop from farmer_crops_trade where trade_id = '$item_id_update')";
+						$resultUpdate=pg_query($conn,$queryUpdate);
+						$b=$_GET["id"];
+
 						$query5="SELECT Trade_crop from farmer_crops_trade where trade_id= $b";
 						$result5 = pg_query($conn, $query5);
 						$row5 = pg_fetch_assoc($result5); 
-						
 						$a=$row5['trade_crop'];
 						
 						
 						$query6="DELETE FROM   cart   WHERE   cropname   = '".$a."'";
 						$result6 = pg_query($conn, $query6); 
-
+						unset($_SESSION["shopping_cart"][$keys]);
 						echo '<script>alert("Елемент видалено")</script>';
 						echo '<script>window.location="cbuy_crops.php"</script>';
 		
@@ -355,7 +361,7 @@ quantityInput.addEventListener("change", () => {
   console.log(quantityInput.value);
   console.log(+max);
   if (+quantityInput.value > +max) {
-    alert(  'Перевищено максимальну кількість. Будь ласка, введіть кількість, меншу або рівну ${max}.'  );
+    alert(  `Перевищено максимальну кількість. Будь ласка, введіть кількість, меншу або рівну ${max}.`  );
     quantityInput.value = max;
   }
 });
