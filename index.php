@@ -146,7 +146,7 @@
             <div class="col-12 col-sm-6">
               <h1 class="text-white">Аграрний портал</h1>
               <p class="text-white">
-              Справжній друг фермера.
+              Справжній твій друг фермера.
               </p>
               <div class="cg">
                 <div class="card card-body bg-gradient-success">
