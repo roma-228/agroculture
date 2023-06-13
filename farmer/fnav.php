@@ -77,7 +77,7 @@
 		   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 			<a class="dropdown-item" href="ftradecrops.php">Торгівля культурами</a>
 			<a class="dropdown-item" href="fstock_crop.php">Запаси врожаю​</a>
-			<a class="dropdown-item" href="fselling_history.php">Історія продажів​</a>
+			
 		  </div>
 		</div>
 			</li>
