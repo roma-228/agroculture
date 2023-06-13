@@ -22,7 +22,7 @@ if(isset($_POST ['adminlogin'])) {
     
 //echo '<script type="text/javascript">alert("'.$_SESSION['admin_login_user'].'");</script>';
 
-   header("location: aprofile.php"); // Redirecting To Other Page
+   header("Location: aprofile.php"); // Redirecting To Other Page
     } 
     else  {
        $error = "Username or Password is invalid";
