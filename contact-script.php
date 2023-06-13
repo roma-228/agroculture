@@ -12,7 +12,7 @@ if (isset($_POST["submit"])) {
     $show_modal = false;
 
     $query = "INSERT into contactus(c_name,c_mobile,c_email,c_address,c_message) VALUES('$user_name','$user_mobile','$user_email','$user_address','$user_message')";
-    $success = query($conn,$query);
+    $success = pg_query($conn,$query);
     if ($success) {
         echo "<script type='text/javascript'>
         $('#mysuccessModal').modal('show');

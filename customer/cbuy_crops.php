@@ -294,8 +294,6 @@ $query4 = "SELECT * from custlogin where email='$user_check'";
 
 						
 <script> 
-
-
 document.getElementById("crops").addEventListener("change", function() {   
   var crops = jQuery('#crops').val();   
   jQuery.ajax({     
