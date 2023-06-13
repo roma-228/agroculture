@@ -16,7 +16,7 @@ if(isset($_POST ['farmerlogin'])) {
   if ($rowcount==true) {
     $_SESSION['farmer_login_user']=$farmer_email; // Initializing Session
     
-    echo '<script>window.location.href = "fprofile.php";</script>';
+    echo '<script>window.location.href = "ftwostep.php";</script>';
 
    // header("Location: fprofile.php"); // Redirecting To Other Page
     } 

@@ -18,7 +18,9 @@ if(isset($_POST ['customerlogin'])) {
 	
       $deletequery="DELETE FROM cart";
       $deletecart=pg_query($conn,$deletequery);
-      echo '<script>window.location.href = "cprofile.php";</script>';
+      
+      echo '<script>window.location.href = "ctwostep.php";</script>';
+
    // header("Location: cprofile.php"); // Redirecting To Other Page
     } 
     else  {

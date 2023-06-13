@@ -4,7 +4,9 @@ require('../sql.php'); // Includes Login Script
 
 // Storing Session
 $user = $_SESSION['customer_login_user'];
-header("Location: cprofile.php");
+//header("Location: cprofile.php");
+echo '<script>window.location.href = "cprofile.php";</script>';
+
 ?>
 
 

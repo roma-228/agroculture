@@ -4,7 +4,8 @@ require('../sql.php'); // Includes Login Script
 
 // Storing Session
 $user = $_SESSION['farmer_login_user'];
-header("Location: fprofile.php");
+//header("Location: fprofile.php");
+echo '<script>window.location.href = "fprofile.php";</script>';
 ?>
 
 
