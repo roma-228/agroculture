@@ -19,4 +19,3 @@ if (!$conn) {
     //     echo 'Connection error' . pg_connect_error();
     // } 
 ?>
-

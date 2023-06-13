@@ -21,8 +21,8 @@ if(isset($_POST ['adminlogin'])) {
     $_SESSION['admin_login_user']=$aname; // Initializing Session
     
 //echo '<script type="text/javascript">alert("'.$_SESSION['admin_login_user'].'");</script>';
-
-   header("Location: aprofile.php"); // Redirecting To Other Page
+echo '<script>window.location.href = "aprofile.php";</script>';
+   //header("Location: aprofile.php"); // Redirecting To Other Page
     } 
     else  {
        $error = "Username or Password is invalid";
