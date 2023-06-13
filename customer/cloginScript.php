@@ -18,8 +18,8 @@ if(isset($_POST ['customerlogin'])) {
 	
       $deletequery="DELETE FROM cart";
       $deletecart=pg_query($conn,$deletequery);
-
-    header("Location: cprofile.php"); // Redirecting To Other Page
+      echo '<script>window.location.href = "cprofile.php";</script>';
+   // header("Location: cprofile.php"); // Redirecting To Other Page
     } 
     else  {
        $error = "Username or Password is invalid";
