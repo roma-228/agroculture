@@ -31,10 +31,10 @@ if(isset($_POST['farmerupdate']))
 		$city = ($_POST['city']);
 		$pass = ($_POST['pass']);
 
-$query5 = "SELECT StateName from state";
-	$ses_sq5 = pg_query($conn, $query5);
-              $row5 = pg_fetch_assoc($ses_sq5);
-              $statename = $row5['StateName'];
+//$query5 = "SELECT StateName from state";
+//	$ses_sq5 = pg_query($conn, $query5);
+              //$row5 = pg_fetch_assoc($ses_sq5);
+             // $statename = $row5['StateName'];
 			  
     $updatequery1 = "UPDATE farmerlogin set  farmer_name='$name', email='$email', phone_no='$mobile',  f_gender='$gender',  f_birthday='$dob',  f_state='null', f_district='$district', f_location='$city', password='$pass'  where farmer_id='$id'";pg_query($conn, $updatequery1);
   header("location: fprofile.php");
